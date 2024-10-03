@@ -1,9 +1,16 @@
 from setuptools import setup, find_packages
+from pathlib import Path
+
+# read the contents of the README.md file
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="simplicatus",
-    version="0.1.0",
-    description="Grossomodo a Python library for converting md documents into PDF, kindle friendly. ",
+    version="0.1.2",
+    description="Grossomodo a Python library for converting md documents into PDF, kindle friendly.",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Sebastjan Rijavec",
     author_email="sebastjan.rijavec@gmail.com",
     url="https://github.com/sebs-tech/simplicatus",
